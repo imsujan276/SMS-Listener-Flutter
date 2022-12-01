@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sms_catch/sms_model.dart';
 import 'package:sms_catch/sqlite_service.dart';
 import 'package:telephony/telephony.dart';
@@ -50,7 +49,6 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> with WidgetsBindingObserver {
   SMS? sms;
   Telephony telephony = Telephony.instance;
-  late SharedPreferences pref;
 
   @override
   void initState() {
